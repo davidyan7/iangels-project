@@ -1,15 +1,14 @@
-<section class="stock-preview-container" >
-    <div>
+<section class="stock-preview-container">
     <h1>{{stock.shortName}}</h1>
-    <div class="stock-price">
-        <h2>{{stock.symbol}}</h2>
-    </div>
-</div>
-<div class="stock-deteils">
-    <p>Market Price: {{stock.regularMarketPrice}}</p>
-    <p>Day's Range: {{stock.regularMarketDayRange}}</p>
-    <p>52w Range: {{stock.fiftyTwoWeekRange}}</p>
-    <p>Market Cap: {{stock.marketCap|currency}}</p>
-</div>
-<button (click)="removeStock(stock.symbol)">Remove Stock</button>
+    <h2 *ngIf="!stock.regularMarketChangePercent">{{stock.symbol}}</h2>
+    <h2 *ngIf="stock.regularMarketChangePercent">{{stock.symbol}} <span class="stock-precent"
+            [ngClass]="{'green':stock.regularMarketChangePercent>0}">
+            ({{stock.regularMarketChangePercent.toFixed(3)}}%)</span></h2>
+            <section class="stock-details">
+                <p>Market Price: {{stock.regularMarketPrice}}</p>
+                <p>Day's Range: {{stock.regularMarketDayRange}}</p>
+                <p>52w Range: {{stock.fiftyTwoWeekRange}}</p>
+                <p>Market Cap: {{stock.marketCap|currency}}</p>
+            </section>
+            <button (click)="removeStock(stock.symbol)">Remove Stock</button>
 </section>

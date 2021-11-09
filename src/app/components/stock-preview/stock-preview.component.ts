@@ -13,9 +13,12 @@ export class StockPreviewComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
   removeStock(symbol:string){
     this.selectStock.emit(symbol)
   }
+
+  
 }

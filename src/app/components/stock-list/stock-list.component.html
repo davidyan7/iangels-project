@@ -1,3 +1,4 @@
 <ul class="stock-main-container">
     <app-stock-preview *ngFor="let stock of stocks ;index as idx" [stock]="stock" (selectStock)="removeStock($event)"></app-stock-preview>
 </ul>
+

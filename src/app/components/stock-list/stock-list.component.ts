@@ -10,6 +10,8 @@ export class StockListComponent implements OnInit {
 @Input() stocks:any
 @Output() selectStock = new EventEmitter()
 
+  headers:any[] =  ['Company Name','Symbol','Market Price','Day Range','52w Range','Market Cap']
+
   constructor() { }
 
   ngOnInit(): void {

@@ -8,10 +8,14 @@ align-items: center;
 
     input{
         margin-right: 5px;
-        border-radius: 15px;
+        border-radius: 8px;
         border: none;
         padding-left: 10px;
         height: 100%;
+        background-color: #969696;
+    }
+    ::placeholder{
+        color: white;
     }
 
     button{
@@ -22,18 +26,18 @@ align-items: center;
         text-align: center;
         text-decoration: none;
         outline: none;
-        color: black;
-        background-color: #cdcdcd;
+        color: rgb(255, 255, 255);
+        background-color: #969696;
         border: none;
-        border-radius: 15px;
+        border-radius: 8px;
         box-shadow: 0 1.5px #999;
     }
     button:hover {
-        background-color: #86b9f0;
+        background-color: #8fd2d0;
     }
 
     button:active {
-        background-color: #005aba;
+        background-color: #81b6b5;
         box-shadow: 0 5px #666;
         transform: translateY(2px);
     }
