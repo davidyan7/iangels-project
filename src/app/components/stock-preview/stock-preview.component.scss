@@ -1,0 +1,35 @@
+.stock-preview-container{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border: 2px solid rgb(199, 199, 199);
+    border-radius: 8px;
+
+    
+    button{
+        display: inline-block;
+        padding: 8px 20px;
+        margin:10px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: black;
+        background-color: #cdcdcd;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 1.5px #999;
+    }
+    button:hover {
+        background-color: #86b9f0;
+    }
+
+    button:active {
+        background-color: #005aba;
+        box-shadow: 0 5px #666;
+        transform: translateY(2px);
+    }
+
+
+
+}

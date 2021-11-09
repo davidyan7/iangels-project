@@ -1,0 +1,10 @@
+
+<div>
+    <form class="stock-search" action="" #form="ngForm" (change)="addStock(form)"> 
+        <div class="stock-search">
+            <input type="text" id="stockSymbol"  placeholder="Stock Symbol" name="stockSymbol" ngModel>
+            <button>Add Stock</button>
+        </div>
+    </form>
+</div>
+<app-stock-list  [stocks]="stocks" (selectStock)="removeStock($event)"></app-stock-list>
